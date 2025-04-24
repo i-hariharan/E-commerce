@@ -65,7 +65,7 @@ export default function Cart() {
         <div className="w-full sm:w-[450px]">
           <CartTotal />
           <div className="w-full text-center">
-            <button onClick={()=>navigate('/place-order')} className="text-sm bg-black text-white hover:scale-110 tansition ease-in my-8 px-4 py-3">Proceed</button>
+            <button onClick={()=>navigate('/E-commerce/place-order')} className="text-sm bg-black text-white hover:scale-110 tansition ease-in my-8 px-4 py-3">Proceed</button>
           </div>
         </div>
       </div>

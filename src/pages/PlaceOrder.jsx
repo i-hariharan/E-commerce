@@ -11,7 +11,7 @@ export default function PlaceOrder() {
   const {navigate} = useContext(ShopContext);
 
   return (
-    <div className='flex flex-row max-md:flex-col justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
+    <div className='flex flex-row max-md:flex-col max-md:gap-20 justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
     {/**left-side */}    
       <div className='flex flex-col gap-4 w-full sm:max-w-[480px]'>
         <div className='text-xl sm:text-2xl my-3'>
@@ -46,24 +46,24 @@ export default function PlaceOrder() {
           <div className='flex flex-col lg:flex-row gap-4'>
 
             <div onClick={()=>setMethod('stripe')} className='flex items-center border p-2 px-3 gap-4 cursor-pointer'>
-              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-gray-500':''}`}></p>
+              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-blue-600':''}`}></p>
               <img src={assets.gpay} alt='' className='w-16 h-16'/>
             </div>
         
             <div onClick={()=>setMethod('razorpay')} className='flex items-center border p-2 px-3 gap-4 cursor-pointer'>
-              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'razorpay' ? 'bg-gray-500':''}`}></p>
+              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'razorpay' ? 'bg-blue-600':''}`}></p>
               <img src={assets.razorpay} alt='' className='w-16 h-16'/>
             </div>
 
             <div onClick={()=>setMethod('cod')} className='flex items-center border p-2 px-3 gap-4 cursor-pointer'>
-              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-gray-500':''}`}></p>
+              <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-blue-600':''}`}></p>
               <p className="text-md text-gray-800 font-weight">Cash on Delivery</p>
             </div>
 
           </div>
 
           <div className="w-full text-center mt-7">
-            <button onClick={()=>navigate('/order')} className="bg-black text-white text-sm px-16 py-3">Place Order</button>
+            <button onClick={()=>navigate('/E-commerce/orders')} className="bg-black text-white text-sm px-16 py-3">Place Order</button>
           </div>
 
         </div>

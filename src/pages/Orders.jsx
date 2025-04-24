@@ -12,7 +12,7 @@ export default function Orders() {
       </div>
 
       <div>
-        {products.slice(1, 4).map((item, index) => (
+        {products.slice(5, 9).map((item, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row justify-between items-center border-t border-b py-4 text-gray-700 gap-4"

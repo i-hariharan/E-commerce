@@ -13,10 +13,11 @@ export default function Navbar() {
 
     const [visible, setVisible] = useState(false);
     const {setShowSearch, getCartCount} = useContext(ShopContext);
+    const {navigate} = useContext(ShopContext);
 
   return (
     <div className="flex items-center justify-between font-medium py-5">
-      <img src={assets.logo} alt="" className="w-32"/>
+      <img src={assets.logo} alt="" className="w-24 max-md:w-16 rounded-full"/>
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/E-commerce" className="flex flex-col gap-1 items-center">
@@ -48,8 +49,8 @@ export default function Navbar() {
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-5">
             <div className="flex flex-col gap-3 w-36 px-5 py-3 bg-slate-100 text-gray-600 rounded">
               <p className="hover:text-black cursor-pointer">Profile</p>
-              <p className="hover:text-black cursor-pointer">Orders</p>
-              <p className="hover:text-black cursor-pointer">Logout</p>
+              <p className="hover:text-black cursor-pointer" onClick={()=>navigate('/E-commerce/orders')}>Orders</p>
+              <p className="hover:text-black cursor-pointer" onClick={()=>navigate('/E-commerce')}>Logout</p>
             </div>
           </div>
         </div>

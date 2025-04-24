@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -31,8 +29,8 @@ function App() {
         <Route path='/E-commerce/collection' element={<Collection />}/>
         <Route path='/E-commerce/contact' element={<Contact />}/>
         <Route path='/E-commerce/login' element={<Login />}/>
-        <Route path='/E-commerce/order' element={<Orders />}/>
-        <Route path='/E-commerce/lace-order' element={<PlaceOrder />}/>
+        <Route path='/E-commerce/orders' element={<Orders />}/>
+        <Route path='/E-commerce/place-order' element={<PlaceOrder />}/>
         <Route path='/E-commerce/product/:productId' element={<Product />}/>
       </Routes>
       <Footer />
